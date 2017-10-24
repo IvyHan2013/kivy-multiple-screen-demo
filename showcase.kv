@@ -63,10 +63,6 @@ BoxLayout:
                     if sm.current != args[1]:\
                     idx = app.screen_names.index(args[1]);\
                     app.go_screen(idx)
-            ActionToggleButton:
-                text: 'Toggle sourcecode'
-                icon: 'data/icons/sourcecode.png'
-                on_release: app.toggle_source_code()
             ActionButton:
                 text: 'Previous screen'
                 icon: 'data/icons/prev.png'
@@ -77,20 +73,6 @@ BoxLayout:
                 icon: 'data/icons/next.png'
                 on_release: app.go_next_screen()
                 important: True
-
-    ScrollView:
-        id: sv
-        size_hint_y: None
-        height: 0
-
-        CodeInput:
-            id: sourcecode
-            lexer: KivyLexer()
-            text: app.sourcecode
-            readonly: True
-            size_hint_y: None
-            font_size: '12sp'
-            height: self.minimum_height
 
     ScreenManager:
         id: sm
