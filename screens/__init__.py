@@ -28,5 +28,6 @@ class ShowcaseScreen(Screen):
         return super(ShowcaseScreen, self).add_widget(*args)
 
 from togglebutton import ToggleButtonScreen
+from togglebutton2 import ToggleButtonDupScreen
 
-__all__ = ['ToggleButtonScreen']
+__all__ = ['ToggleButtonScreen', 'ToggleButtonDupScreen']

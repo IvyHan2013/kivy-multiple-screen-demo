@@ -21,7 +21,7 @@ class ShowcaseApp(App):
     def build(self):
         self.title = 'hello world'
         self.screens = {}
-        self.available_screens = ['ToggleButtonScreen']
+        self.available_screens = screens.__all__
         self.screen_names = self.available_screens
         self.go_next_screen()
 
