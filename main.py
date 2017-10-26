@@ -15,14 +15,13 @@ import screens
 class ShowcaseApp(App):
     index = NumericProperty(-1)
     current_title = StringProperty()
-    screen_names = ListProperty([])
+    available_screens = ListProperty([])
     hierarchy = ListProperty([])
 
     def build(self):
         self.title = 'hello world'
         self.screens = {}
         self.available_screens = screens.__all__
-        self.screen_names = self.available_screens
         self.go_next_screen()
 
     def on_pause(self):
