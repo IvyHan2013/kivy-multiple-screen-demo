@@ -1,0 +1,64 @@
+<VisHomeScreen>:
+	name : 'VisHomeScreen'
+
+	GridLayout:
+        cols: 1
+        size_hint_y: None  
+        pos_hint_y: None
+        spacing: '25dp'
+        height: self.minimum_height
+
+
+        Label:
+            text: 'MobileInsight Visualization'
+            font_size: '50dp'
+
+        Widget:
+        BoxLayout:
+        	orientation: 'vertical'
+        	spacing: '5dp'
+        	padding: '5dp'
+        	height: self.minimum_height
+        	size_hint_y: None
+        	pos_hint_y: None
+
+	        Button:
+	        	size_hint_x: 0.5
+	        	size_hint_y: None
+	        	pos_hint: {"center_x": .5}
+	            text: 'Radio'
+	            font_size: '24dp'
+	            height: '64dp'
+	        	on_release: app.go_screen(3)
+	        Button:
+	        	size_hint_x: 0.5
+	        	size_hint_y: None
+	        	pos_hint: {"center_x": .5}
+	        	text: 'Data-plane Statistics'
+	        	font_size: '24dp'
+	        	height: '64dp'
+				on_release: app.go_screen(4)
+	        Button:
+	        	size_hint_x: 0.5
+	        	size_hint_y: None
+	        	pos_hint: {"center_x": .5}
+	        	text: 'Connectivity Information'
+	        	font_size: '24dp'
+	        	height: '64dp'
+				on_release: app.go_screen(5)
+	        Button:
+	        	size_hint_x: 0.5
+	        	size_hint_y: None
+	        	pos_hint: {"center_x": .5}
+	        	text: 'Mobility Information'
+	        	font_size: '24dp'
+	        	height: '64dp'
+				on_release:app.go_screen(6)
+	        Button:
+	        	size_hint_x: 0.5
+	        	size_hint_y: None
+	        	pos_hint: {"center_x": .5}
+	        	text: 'Data/Voice Service'
+	        	font_size: '24dp'
+	        	height: '64dp'
+				on_release:app.go_screen(7)

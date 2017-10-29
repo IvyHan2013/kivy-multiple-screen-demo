@@ -15,13 +15,14 @@ import screens
 class ShowcaseApp(App):
     index = NumericProperty(-1)
     current_title = StringProperty()
-    available_screens = ListProperty([])
+    screen_names = ListProperty([])
     hierarchy = ListProperty([])
 
     def build(self):
         self.title = 'hello world'
         self.screens = {}
         self.available_screens = screens.__all__
+        self.screen_names = self.available_screens
         self.go_next_screen()
 
     def on_pause(self):
@@ -43,7 +44,7 @@ class ShowcaseApp(App):
 
     def go_next_screen(self):
         self.index = (self.index + 1) % len(self.available_screens)
-        print self.index
+        #print self.index
         screen = self.load_screen(self.index)
         sm = self.root.ids.sm
         if screen.name != sm.current:
@@ -51,6 +52,7 @@ class ShowcaseApp(App):
             self.current_title = screen.name
 
     def go_screen(self, idx):
+        #print self.index
         self.index = idx
         self.root.ids.sm.switch_to(self.load_screen(idx), direction='left')
 
@@ -67,6 +69,7 @@ class ShowcaseApp(App):
     def load_screen(self, index):
         if index in self.screens:
             return self.screens[index]
+        print index
         print self.available_screens[index]
         screen = getattr(screens, self.available_screens[index])()
         self.screens[index] = screen

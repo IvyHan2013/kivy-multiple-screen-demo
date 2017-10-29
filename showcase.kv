@@ -43,10 +43,10 @@ BoxLayout:
                 id: spnr
                 important: True
                 text: 'Jump to Screen'
-                values: app.available_screens
+                values: app.screen_names
                 on_text:
                     if sm.current != args[1]:\
-                    idx = app.available_screens.index(args[1]);\
+                    idx = app.screen_names.index(args[1]);\
                     app.go_screen(idx)
             ActionButton:
                 text: 'Previous screen'
@@ -63,5 +63,5 @@ BoxLayout:
         id: sm
         on_current_screen:
             spnr.text = args[1].name
-            idx = app.available_screens.index(args[1].name)
+            idx = app.screen_names.index(args[1].name)
             if idx > -1: app.hierarchy.append(idx)

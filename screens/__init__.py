@@ -29,5 +29,12 @@ class ShowcaseScreen(Screen):
 
 from togglebutton import ToggleButtonScreen
 from togglebutton2 import ToggleButtonDupScreen
+from visHome import VisHomeScreen
+from radio import RadioScreen
+from dpstat import DPStatScreen
+from conInfo import ConInfoScreen
+from mobInfo import MobInfoScreen
+from dvSer import DVSerScreen 
 
-__all__ = ['ToggleButtonScreen', 'ToggleButtonDupScreen']
+__all__ = ['ToggleButtonScreen', 'ToggleButtonDupScreen', 'VisHomeScreen',\
+            'RadioScreen','DPStatScreen','ConInfoScreen','MobInfoScreen','DVSerScreen']
